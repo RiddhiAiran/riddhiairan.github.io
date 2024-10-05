@@ -3,74 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Riddhi's Python Projects Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Text:wght@400;600&family=SF+Pro+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            line-height: 1.47059;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 22px;
+        }
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: saturate(180%) blur(20px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 0;
+        }
+        .logo {
+            font-family: 'SF Pro Display', sans-serif;
+            font-size: 21px;
+            font-weight: 700;
+        }
+        .nav-links a {
+            color: #1d1d1f;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 14px;
+        }
+        .hero {
+            text-align: center;
+            padding: 80px 0;
+        }
+        h1 {
+            font-family: 'SF Pro Display', sans-serif;
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            font-size: 28px;
+            color: #6e6e73;
+            margin-bottom: 40px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #0071e3;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 980px;
+            font-size: 17px;
+            font-weight: 400;
+        }
+        .projects {
+            padding: 60px 0;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .project-card {
+            background-color: #ffffff;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: scale(1.02);
+            box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.16);
+        }
+        .project-info {
+            padding: 30px;
+        }
+        .project-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .project-description {
+            font-size: 17px;
+            color: #6e6e73;
+            margin-bottom: 20px;
+        }
+        .project-link {
+            display: inline-block;
+            background-color: #0071e3;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 980px;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        footer {
+            background-color: #f5f5f7;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 12px;
+            color: #86868b;
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            color: #515154;
+            font-size: 24px;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="header-content">
-                <h1><i class="fas fa-code"></i> Riddhi's 100 Days of Python Projects</h1>
-                <p>Explore my journey of building innovative Python projects over the course of 100 days.</p>
-            </div>
+            <nav>
+                <div class="logo">Riddhi Airan 👩‍💻</div>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
         </div>
     </header>
 
-    <section class="projects-section">
-        <div class="container">
-            <div class="project-card">
-                <img src="project1.jpg" alt="Band Name Generator" class="project-image">
-                <div class="project-info">
-                    <h2>Project 1: Band Name Generator</h2>
-                    <p>A fun Streamlit-based app that generates random band names. Get your band's next big name here!</p>
-                    <a href="https://100-days-of-python-day-01.streamlit.app/" class="btn" target="_blank"><i class="fas fa-external-link-alt"></i> View Project</a>
-                </div>
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <h1>100 Days of Python 🐍</h1>
+                <p class="subtitle">Exploring innovative projects, one day at a time</p>
+                <a href="#" class="cta-button" download>Download Resume 📄</a>
             </div>
+        </section>
 
-            <div class="project-card">
-                <img src="project2.jpg" alt="Tip Calculator" class="project-image">
-                <div class="project-info">
-                    <h2>Project 2: Tip Calculator</h2>
-                    <p>An easy-to-use calculator to quickly determine the right tip based on your bill.</p>
-                    <a href="https://100-days-of-python-day-02.streamlit.app/" class="btn" target="_blank"><i class="fas fa-external-link-alt"></i> View Project</a>
+        <section class="projects" id="projects">
+            <div class="container">
+                <div class="project-grid">
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h2 class="project-title">🎸 Band Name Generator</h2>
+                            <p class="project-description">Generate unique band names with this fun Streamlit app.</p>
+                            <a href="https://100-days-of-python-day-01.streamlit.app/" class="project-link" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h2 class="project-title">💰 Tip Calculator</h2>
+                            <p class="project-description">Calculate tips quickly and easily with this handy tool.</p>
+                            <a href="https://100-days-of-python-day-02.streamlit.app/" class="project-link" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h2 class="project-title">🏝️ Treasure Island</h2>
+                            <p class="project-description">Embark on a thrilling treasure hunt in this text-based adventure game.</p>
+                            <a href="https://100-days-of-python-day-03.streamlit.app/" class="project-link" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h2 class="project-title">✊✋✌️ Rock Paper Scissors</h2>
+                            <p class="project-description">Play the classic game against a computer opponent.</p>
+                            <a href="https://100-days-of-python-day-04.streamlit.app/" class="project-link" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h2 class="project-title">🔐 Password Generator</h2>
+                            <p class="project-description">Create strong, secure passwords with just one click.</p>
+                            <a href="https://100-days-of-python-day-05.streamlit.app/" class="project-link" target="_blank">View Project</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="project-card">
-                <img src="project3.jpg" alt="Treasure Island" class="project-image">
-                <div class="project-info">
-                    <h2>Project 3: Treasure Island</h2>
-                    <p>A fun adventure game where you hunt for treasure on an island. Will you find the hidden gold?</p>
-                    <a href="https://100-days-of-python-day-03.streamlit.app/" class="btn" target="_blank"><i class="fas fa-external-link-alt"></i> View Project</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="project4.jpg" alt="Rock Paper Scissors" class="project-image">
-                <div class="project-info">
-                    <h2>Project 4: Rock, Paper, Scissors</h2>
-                    <p>Play the classic game against the computer and see if you can win!</p>
-                    <a href="https://100-days-of-python-day-04.streamlit.app/" class="btn" target="_blank"><i class="fas fa-external-link-alt"></i> View Project</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="project5.jpg" alt="Password Generator" class="project-image">
-                <div class="project-info">
-                    <h2>Project 5: Password Generator</h2>
-                    <p>Generate strong, secure passwords in an instant with just one click.</p>
-                    <a href="https://100-days-of-python-day-05.streamlit.app/" class="btn" target="_blank"><i class="fas fa-external-link-alt"></i> View Project</a>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Riddhi Airan | <a href="https://github.com/RiddhiAiran/100-days-of-python" target="_blank"><i class="fab fa-github"></i> View GitHub Repository</a></p>
+            <p>&copy; 2024 Riddhi Airan. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" target="_blank">📱</a>
+                <a href="#" target="_blank">💼</a>
+                <a href="#" target="_blank">🐦</a>
+                <a href="#" target="_blank">✉️</a>
+            </div>
         </div>
     </footer>
 </body>
